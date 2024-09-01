@@ -1,0 +1,379 @@
+{
+	"info": {
+		"_postman_id": "ff23d23e-221c-475c-a8d3-52464e4da8f1",
+		"name": "Palm Hotels Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25918886"
+	},
+	"item": [
+		{
+			"name": "room",
+			"item": [
+				{
+					"name": "add a new room",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/C:/Users/fatih/Desktop/hotel pics/1.jpeg"
+								},
+								{
+									"key": "roomType",
+									"value": "Single Bed Room",
+									"type": "text"
+								},
+								{
+									"key": "roomPrice",
+									"value": "300",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/rooms/add/new-room",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rooms",
+								"add",
+								"new-room"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get room types",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rooms/room/types",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rooms",
+								"room",
+								"types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get all rooms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rooms/all-rooms",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rooms",
+								"all-rooms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a room",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/rooms/delete/room/<roomId>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rooms",
+								"delete",
+								"room",
+								"<roomId>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a room",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "roomType",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "roomPrice",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/rooms/update/<roomId>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rooms",
+								"update",
+								"<roomId>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a room by roomId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "roomType",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "roomPrice",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/rooms/room/<roomId>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rooms",
+								"room",
+								"<roomId>"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bookings",
+			"item": [
+				{
+					"name": "Get all bookings",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "roomType",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "roomPrice",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/bookings/all-bookings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings",
+								"all-bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a booking by confirmationCode",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "roomType",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "roomPrice",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/bookings/confirmation/<confirmationCode>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings",
+								"confirmation",
+								"<confirmationCode>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel a booking by bookingId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/bookings/room/<bookingId>/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings",
+								"room",
+								"<bookingId>",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save a booking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"bookingId\": 1,\r\n  \"checkInDate\": \"2024-09-10\",\r\n  \"checkOutDate\": \"2024-09-15\",\r\n  \"guestFullName\": \"John Doe\",\r\n  \"guestEmail\": \"johndoe@example.com\",\r\n  \"numOfAdults\": 2,\r\n  \"numOfChildren\": 1,\r\n  \"totalNumOfGuest\": 3,\r\n  \"bookingConfirmationCode\": \"ABC123456\",\r\n  \"roomResponse\": {\r\n    \"id\": 101,\r\n    \"roomType\": \"Deluxe\",\r\n    \"roomPrice\": 150.00\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/bookings/room/<bookingId>/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings",
+								"room",
+								"<bookingId>",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
